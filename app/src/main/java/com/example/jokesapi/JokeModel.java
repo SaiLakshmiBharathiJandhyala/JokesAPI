@@ -1,7 +1,7 @@
 package com.example.jokesapi;
 
-public class JokeModel {
-    String modeljoke;
+class JokeModel {
+    private String modeljoke;
 
     public JokeModel(String modeljoke) {
         this.modeljoke = modeljoke;

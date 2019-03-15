@@ -10,8 +10,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class JokeAdapter extends RecyclerView.Adapter<JokeAdapter.JokeHolder> {
-    private JokesActivity jokesActivity;
-    private ArrayList<JokeModel> strings;
+    private final JokesActivity jokesActivity;
+    private final ArrayList<JokeModel> strings;
 
     public JokeAdapter(JokesActivity jokesActivity, ArrayList<JokeModel> strings) {
         this.jokesActivity = jokesActivity;
@@ -37,9 +37,9 @@ public class JokeAdapter extends RecyclerView.Adapter<JokeAdapter.JokeHolder> {
     }
 
     public class JokeHolder extends RecyclerView.ViewHolder {
-        TextView tv;
+        final TextView tv;
 
-        public JokeHolder(@NonNull View itemView) {
+        JokeHolder(@NonNull View itemView) {
             super(itemView);
             tv = itemView.findViewById(R.id.jokes_text_view);
         }

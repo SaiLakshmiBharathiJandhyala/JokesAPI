@@ -25,20 +25,22 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class JokesActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
-    RecyclerView rv;
-    int loader_id = 20;
-    String jokes_url = "http://api.icndb.com/jokes/random/";
-    ArrayList<JokeModel> jokeModels;
-    String strings;
-    ProgressBar progressBar;
+    private final int loader_id = 20;
+    private final String jokes_url = "http://api.icndb.com/jokes/random/";
+    private RecyclerView rv;
+    private ArrayList<JokeModel> jokeModels;
+    private String strings;
+    private ProgressBar progressBar;
     int positionIndex;
-    LinearLayoutManager llmanager;
+    private LinearLayoutManager llmanager;
     int topView;
-    long currentVisiblePosition;
+    private long currentVisiblePosition;
 
+    @SuppressWarnings("deprecation")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +48,7 @@ public class JokesActivity extends AppCompatActivity implements LoaderManager.Lo
         rv = findViewById(R.id.jokes_recycler);
         strings = getIntent().getStringExtra("num");
         progressBar = findViewById(R.id.progress_bar);
-        jokeModels = new ArrayList<JokeModel>();
+        jokeModels = new ArrayList<>();
         llmanager = new LinearLayoutManager(this);
         rv.setLayoutManager(llmanager);
         ConnectivityManager cm = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
@@ -125,14 +127,14 @@ public class JokesActivity extends AppCompatActivity implements LoaderManager.Lo
     protected void onPause() {
         super.onPause();
         currentVisiblePosition = 0;
-        currentVisiblePosition = ((LinearLayoutManager) rv.getLayoutManager()).findFirstCompletelyVisibleItemPosition();
+        currentVisiblePosition = ((LinearLayoutManager) Objects.requireNonNull(rv.getLayoutManager())).findFirstCompletelyVisibleItemPosition();
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        ((LinearLayoutManager) rv.getLayoutManager()).scrollToPosition((int) currentVisiblePosition);
+        Objects.requireNonNull(rv.getLayoutManager()).scrollToPosition((int) currentVisiblePosition);
         currentVisiblePosition = 0;
     }
 }
