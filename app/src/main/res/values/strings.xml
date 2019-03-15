@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JokesAPI</string>
+    <string name="enter_a_number">Enter a Number</string>
+    <string name="get_jokes">get Jokes</string>
+</resources>

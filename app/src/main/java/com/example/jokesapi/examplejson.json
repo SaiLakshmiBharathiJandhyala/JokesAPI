@@ -1,0 +1,37 @@
+{
+  "type": "success",
+  "value": [
+    {
+      "id": 598,
+      "joke": "Once Chuck Norris and Superman had a competition. The loser had to wear his underwear over his pants.",
+      "categories": []
+    },
+    {
+      "id": 510,
+      "joke": "Chuck Norris can compile syntax errors.",
+      "categories": [
+        "nerdy"
+      ]
+    },
+    {
+      "id": 331,
+      "joke": "Chuck Norris once ate four 30lb bowling balls without chewing.",
+      "categories": []
+    },
+    {
+      "id": 119,
+      "joke": "Thousands of years ago Chuck Norris came across a bear. It was so terrified that it fled north into the arctic. It was also so terrified that all of its decendents now have white hair.",
+      "categories": []
+    },
+    {
+      "id": 297,
+      "joke": "Noah was the only man notified before Chuck Norris relieved himself in the Atlantic Ocean.",
+      "categories": []
+    },
+    {
+      "id": 182,
+      "joke": "In a recent survey it was discovered the 94% of American women lost their virginity to Chuck Norris. The other 6% were incredibly fat or ugly.",
+      "categories": []
+    }
+  ]
+}
